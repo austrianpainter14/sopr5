@@ -1,0 +1,8 @@
+/* glass.css */
+.site-header {
+  background: rgba(10, 10, 15, 0.6); /* semi-transparent */
+  backdrop-filter: blur(10px); /* frosted glass */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 0, 127, 0.2); /* subtle neon border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* slight depth */
+}

@@ -1,0 +1,42 @@
+/* Search container inside header */
+.search-container {
+  position: absolute;
+  left: 48%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  max-width: 400px; /* maximum width */
+  width: 100%;      /* full width within container */
+  display: flex;
+  justify-content: center;
+  transition: top 0.3s ease, transform 0.3s ease;
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: 'Jersey 10', sans-serif;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* always-on shadow */
+  font-size: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Expand on hover/focus */
+.search-bar:hover,
+.search-bar:focus {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+/* HIDE search bar when screen shrinks */
+@media (max-width: 1300px) {
+  .search-container {
+    display: none; /* prevents overlap with navbar */
+  }
+}

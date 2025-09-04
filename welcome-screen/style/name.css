@@ -1,0 +1,16 @@
+/* Base hero styles */
+.hero {
+  height: 80vh; /* full viewport height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  color: white;
+  font-family: 'Jersey 10', sans-serif;
+  text-align: center;
+  padding: 0 20px; /* prevent overflow on small screens */
+}
+
+.hero h1 {
+  font-size: 6rem; /* default large size */
+  margin: 0;
+}

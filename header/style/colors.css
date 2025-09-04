@@ -1,0 +1,21 @@
+.logo {
+  color: #ff007f;
+  text-shadow: 0 0 6px #ff007f, 0 0 12px #ff00ff;
+}
+
+.navbar a {
+  color: #fff;
+  text-shadow: 0 0 4px #ff007f;
+}
+
+.navbar a:hover {
+  color: #ff00ff;
+}
+
+.btn-primary {
+  background: #ff007f;
+  color: #fff;
+  
+}
+
+

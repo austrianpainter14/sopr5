@@ -1,0 +1,23 @@
+.navbar a {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  padding: clamp(8px, 1vw, 12px) clamp(18px, 2vw, 26px);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}

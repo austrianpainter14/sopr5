@@ -1,0 +1,23 @@
+.site-header {
+  position: relative; /* needed for pseudo-element */
+}
+
+/* Neon underline using ::after */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px; /* thicker underline */
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff007f, #ff00ff);
+  background-size: 300% 100%;
+  animation: neonLine 3s linear infinite;
+  border-radius: 2px;
+}
+
+/* Animate gradient */
+@keyframes neonLine {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}

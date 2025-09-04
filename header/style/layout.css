@@ -1,0 +1,105 @@
+/* Header container */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0a0a0f;
+  position: relative;
+  flex-wrap: nowrap; /* prevent wrapping */
+  transition: padding 0.3s ease; /* smooth in and out */
+}
+
+/* Expand on hover OR when search is focused */
+.site-header:hover,
+.site-header:focus-within {
+  padding: 25px 40px; /* increase vertical padding */
+}
+
+
+
+
+/* Logo */
+.logo {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  white-space: nowrap; /* prevent breaking */
+  color: #ff007f;
+  text-shadow: 0 0 6px #ff007f, 0 0 12px #ff00ff;
+}
+
+/* Navbar links */
+.navbar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-shrink: 1; /* allows shrinking */
+}
+
+.navbar a {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 4px #ff007f;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff00ff;
+  transform: translateY(-2px);
+}
+
+
+/* Hamburger (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* RESPONSIVE */
+  /* RESPONSIVE */
+@media (max-width: 900px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;                  /* stick to left side */
+    flex-direction: column;
+    background: #0a0a0f;
+    gap: 15px;
+    width: 120px;             /* fixed width for neat slide-in */
+    border-radius: 0 0px 0px 10px;
+
+    /* hidden by default */
+    max-height: 0;
+    padding: 0;               /* no padding when closed */
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: 
+      max-height 0.4s ease-in-out,
+      padding 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+  }
+
+  .navbar.active {
+    max-height: 500px;        /* enough for your links */
+    padding: 20px;            /* padding only when open */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+

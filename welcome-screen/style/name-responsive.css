@@ -1,0 +1,10 @@
+/* Make hero text flexible on smaller screens */
+.hero h1 {
+  font-size: clamp(2rem, 10vw, 6rem); /* min 2rem, max 6rem, scales with viewport */
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 5vw; /* extra scaling for very small devices */
+  }
+}

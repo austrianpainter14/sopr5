@@ -1,0 +1,5 @@
+/* First import the base styles */
+@import url("name.css");
+
+/* Then import responsive overrides */
+@import url("name-responsive.css");

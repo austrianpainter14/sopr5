@@ -1,0 +1,94 @@
+/* === HEADER ENTRANCE ANIMATIONS === */
+
+/* Header drops in */
+.site-header {
+  animation: dropIn 0.8s ease-in-out forwards;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+@keyframes dropIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Underline comes alive */
+.site-header::after {
+  animation: neonLine 2.5s linear infinite;
+}
+
+/* Base logo state: visible if no animation */
+/* Base logo state */
+.logo {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Fly-in animation, applied only via JS */
+.fly-in-desktop {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: flyInLeft 1s ease-in-out forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes flyInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* Navbar fly in from right */
+.navbar {
+  animation: flyInRight 1s ease-in-out forwards;
+  transform: translateX(100px);
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+
+@keyframes flyInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Search bar fly in from top */
+/* Default search bar (visible) */
+/* Default (invisible before animation) */
+.search-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -150%) scale(0.8); /* start offscreen */
+  opacity: 0;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* When page loads, fly from top */
+.search-container.fly-in {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  
+}
+
+/* Hidden state for resize */
+.search-container.hidden {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}

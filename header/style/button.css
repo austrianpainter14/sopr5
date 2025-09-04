@@ -1,0 +1,51 @@
+.btn-primary {
+  position: relative;
+  background: #ff007f; /* solid button */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: clamp(8px, 1vw, 12px) clamp(18px, 2vw, 26px);
+  font-family: 'Jersey 10', sans-serif;
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Neon outline using ::before */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top/right/bottom/left */
+  border-radius: 25px; /* match button radius */
+  padding: 2px; /* thickness of the outline */
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff007f, #ff00ff);
+  background-size: 300% 100%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the outline on hover */
+.btn-primary:hover::before {
+  opacity: 1;
+  animation: neonLine 5s linear infinite;
+}
+
+/* Optional: slight button scale */
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* Neon gradient animation */
+@keyframes neonLine {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
