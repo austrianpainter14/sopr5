@@ -1,16 +1,29 @@
-/* Base hero styles */
 .hero {
-  height: 80vh; /* full viewport height */
+  height: 100vh;
   display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
+  justify-content: center;
+  align-items: center;
   color: white;
   font-family: 'Jersey 10', sans-serif;
+
+  /* background image */
+  background: 
+    linear-gradient(rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* overlay */
+    url("img/background.jpg"); /* your file */
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   text-align: center;
-  padding: 0 20px; /* prevent overflow on small screens */
+  padding: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
-  font-size: 6rem; /* default large size */
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 10vw, 6rem);
   margin: 0;
 }

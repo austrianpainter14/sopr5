@@ -1,0 +1,32 @@
+.hero h1 {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: clamp(2rem, 10vw, 6rem);
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid white; /* cursor */
+  width: 0;
+
+  /* Animations */
+  animation: 
+    typing 2s steps(20, end) forwards 2s,    /* start after 1s header animation */
+    blink 1.5s step-end infinite 1s,        /* blink also starts after 1s */
+    cursorFade 0.5s ease forwards 5s;        /* fade starts after typing (1s delay + 3s typing) */
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 20ch; } /* adjust to text length */
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 50%, 100% { border-color: white; }
+  25%, 75%      { border-color: transparent; }
+}
+
+/* Fade out cursor */
+@keyframes cursorFade {
+  to { border-color: transparent; }
+}

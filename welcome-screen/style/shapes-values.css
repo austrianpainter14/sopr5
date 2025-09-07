@@ -1,0 +1,37 @@
+:root {
+    /* Circle */
+    --circle-width: clamp(30px, 5vw, 50px);
+    --circle-height: clamp(30px, 5vw, 50px);
+    --circle-top: clamp(30%, 40%, 50%);
+    --circle-left: clamp(30%, 38%, 45%);
+
+    /* Triangle */
+    --triangle-width: clamp(30px, 5vw, 50px);
+    --triangle-height: clamp(25px, 4vw, 45px);
+    --triangle-top: clamp(25%, 35%, 45%);
+    --triangle-right: clamp(30%, 38%, 45%);
+
+    /* Blob */
+    --blob-width: clamp(30px, 4vw, 50px);
+    --blob-height: clamp(30px, 4vw, 50px);
+    --blob-bottom: clamp(20%, 30%, 40%);
+    --blob-left: clamp(25%, 35%, 45%);
+
+    /* Square */
+    --square-width: clamp(25px, 4vw, 45px);
+    --square-height: clamp(25px, 4vw, 45px);
+    --square-bottom: clamp(20%, 28%, 35%);
+    --square-right: clamp(30%, 37%, 45%);
+
+    /* Hexagon */
+    --hex-width: clamp(40px, 5vw, 70px);
+    --hex-height: clamp(20px, 3vw, 38px);
+    --hex-top: clamp(25%, 35%, 45%);
+    --hex-left: clamp(40%, 50%, 60%);
+
+    /* Circle2 */
+    --circle2-width: clamp(20px, 3vw, 40px);
+    --circle2-height: clamp(20px, 3vw, 40px);
+    --circle2-bottom: clamp(20%, 30%, 40%);
+    --circle2-left: clamp(50%, 60%, 70%);
+  }

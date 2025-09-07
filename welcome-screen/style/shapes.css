@@ -1,0 +1,51 @@
+.name-container {
+  position: relative;
+  display: inline-block; /* so shapes stick to the name */
+}
+
+.shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shape-wrapper {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(24px) scale(0.86) rotate(-6deg);
+  filter: blur(6px);
+  will-change: transform, opacity, filter;
+}
+
+.shapes.show .shape-wrapper {
+  animation: shape-reveal 700ms cubic-bezier(.2,.9,.2,1) forwards;
+  animation-delay: calc(var(--i, 0) * 120ms);
+}
+
+@keyframes shape-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.86) rotate(-6deg);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.02) rotate(2deg);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+    filter: blur(0);
+  }
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.3;
+  z-index: 0;
+}

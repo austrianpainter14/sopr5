@@ -1,0 +1,124 @@
+/* Circle */
+
+.shape {
+  position: absolute;
+  transform-origin: center center;
+  /* float animation as before */
+}
+
+
+.shape-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* full hero width */
+  height: 100%; /* full hero height */
+  transform: translate(var(--offset-x, 0px), var(--offset-y, 0px));
+}
+
+
+
+.circle {
+  position: absolute;
+  transform: translate(var(--offset-x, 0px), var(--offset-y, 0px)); /* mouse offset */
+  transform-origin: center center;
+  /* float animations stay as before */
+}
+
+@keyframes float-circle {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(-8px, -10px) rotate(-10deg); }
+  50%  { transform: translate(6px, -12px) rotate(10deg); }
+  75%  { transform: translate(-5px, 8px) rotate(-8deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/* Circle2 (top) */
+.circle2 {
+  animation: float-circle2 14s infinite ease-in-out alternate 0.3s;
+  position: absolute;
+  bottom: var(--circle2-bottom);
+  left: 50%;
+  transform-origin: center center;
+  transform: translateX(-50%) translate(var(--offset-x, 0px), var(--offset-y, 0px));
+}
+
+
+@keyframes float-circle2 {
+  0%   { transform: translateX(-50%) translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translateX(-50%) translate(-5px, -8px) rotate(-6deg); }
+  50%  { transform: translateX(-50%) translate(4px, -10px) rotate(8deg); }
+  75%  { transform: translateX(-50%) translate(-6px, 5px) rotate(-5deg); }
+  100% { transform: translateX(-50%) translate(0px, 0px) rotate(0deg); }
+}
+
+
+/* Square (bottom) */
+.square {
+  position: absolute;
+  transform: translate(var(--offset-x, 0px), var(--offset-y, 0px)); /* mouse offset */
+  transform-origin: center center;
+  /* float animations stay as before */
+}
+
+@keyframes float-square {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(-4px, -6px) rotate(-3deg); }
+  50%  { transform: translate(3px, -8px) rotate(4deg); }
+  75%  { transform: translate(-5px, 4px) rotate(-2deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.triangle {
+  position: absolute;
+  transform: translate(var(--offset-x, 0px), var(--offset-y, 0px)); /* mouse offset */
+  transform-origin: center center;
+  /* float animations stay as before */
+}
+
+
+
+
+@keyframes float-triangle {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(5px, -8px) rotate(-7deg); }
+  50%  { transform: translate(-6px, -12px) rotate(9deg); }
+  75%  { transform: translate(4px, 6px) rotate(-5deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/* Blob */
+.blob {
+  position: absolute;
+  transform: translate(var(--offset-x, 0px), var(--offset-y, 0px)); /* mouse offset */
+  transform-origin: center center;
+  /* float animations stay as before */}
+
+@keyframes float-blob {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(-6px, -10px) rotate(-8deg); }
+  50%  { transform: translate(5px, -12px) rotate(10deg); }
+  75%  { transform: translate(-4px, 6px) rotate(-6deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/* Hexagon */
+/* Hexagon */
+.hexagon {
+  animation: float-hex 12s infinite ease-in-out alternate;
+  position: absolute;
+  top: var(--hex-top);
+  left: 50%;
+  transform-origin: center center;
+  transform: translateX(-50%) translate(var(--offset-x, 0px), var(--offset-y, 0px));
+}
+
+
+/* Keyframes */
+@keyframes float-hex {
+  0%   { transform: translateX(-50%) translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translateX(-50%) translate(6px, -10px) rotate(-7deg); }
+  50%  { transform: translateX(-50%) translate(-5px, -13px) rotate(9deg); }
+  75%  { transform: translateX(-50%) translate(5px, 7px) rotate(-6deg); }
+  100% { transform: translateX(-50%) translate(0px, 0px) rotate(0deg); }
+}

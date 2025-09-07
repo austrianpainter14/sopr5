@@ -1,6 +1,3 @@
-.site-header {
-  position: relative; /* needed for pseudo-element */
-}
 
 /* Neon underline using ::after */
 .site-header::after {

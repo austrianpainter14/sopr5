@@ -3,3 +3,12 @@
 
 /* Then import responsive overrides */
 @import url("name-responsive.css");
+@import url("shapes-animations.css");
+@import url("shapes-style.css");
+@import url("text-animations.css");
+@import url("text-style.css");
+@import url("mouse-light.css");
+@import url("background.css");
+@import url("name-transition.css");
+@import url("shapes-transition.css");
+@import url("shapes.css");

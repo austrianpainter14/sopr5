@@ -1,20 +1,25 @@
-/* Header container */
+
+
 .site-header {
+  position: fixed;       /* sticks with you */
+  top: 0;                /* always at top */
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   background: #0a0a0f;
-  position: relative;
-  flex-wrap: nowrap; /* prevent wrapping */
-  transition: padding 0.3s ease; /* smooth in and out */
+  flex-wrap: nowrap;
+  transition: padding 0.3s ease;
+  z-index: 1000;
 }
 
-/* Expand on hover OR when search is focused */
 .site-header:hover,
 .site-header:focus-within {
-  padding: 25px 40px; /* increase vertical padding */
+  padding: 25px 40px;
 }
+
 
 
 
