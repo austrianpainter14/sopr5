@@ -9,7 +9,7 @@
   /* background image */
   background: 
     linear-gradient(rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* overlay */
-    url("img/background.jpg"); /* your file */
+    url("img/Background.jpg"); /* your file */
     
   background-size: cover;
   background-position: center;
